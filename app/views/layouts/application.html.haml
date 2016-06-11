@@ -1,10 +1,11 @@
 !!!
 %html
-	%head
-		%title= full_title(yield(:title))
-		= csrf_meta_tags
-		= stylesheet_link_tag    'application', media: 'all', |
-			'data-turbolinks-track': 'reload'                   |
-		= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-	%body
-		= yield
+  %head
+    %title= full_title(yield(:title))
+    = render 'layouts/rails_default'
+    = render 'layouts/shim'
+  %body
+    = render 'layouts/header'
+    .container
+      = yield
+      = render 'layouts/footer'
