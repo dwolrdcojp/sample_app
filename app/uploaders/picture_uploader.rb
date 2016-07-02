@@ -1,12 +1,5 @@
 # encoding: utf-8
 
-# AWS IAM
-#  dwolrdcojp
-# Access Key ID:
-# AKIAIJ4AQ274KFUEAPSQ
-# Secret Access Key:
-# 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
-
 class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   process resize_to_limit: [400, 400]
